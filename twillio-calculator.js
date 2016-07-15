@@ -70,7 +70,12 @@
         normilizePhoneNumber(firstNumberEl.value),
         normilizePhoneNumber(secondNumberEl.value),
         function (price) {
-          resultInput.value = price + ' USD';
+          if (price) {
+            resultInput.value = price + ' USD';
+          } else {
+            resultInput.value = 'Something went wrong :(';
+          }
+
         },
         function () {
           resultInput.value = 'Something went wrong :(';
